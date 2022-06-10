@@ -62,7 +62,7 @@ if((board[0] == board[1]) && (board[1] == board[2]) && (board [0] != " ")) {
 } else if ((board[0] == board[4]) && (board[4] == board[8]) && (board[0] != " ")) {
     winner = true;
 }
-
+    return winner;
 }
 bool filled_up() {
     bool filled = true;
