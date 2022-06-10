@@ -1,5 +1,6 @@
 #include <iostream>
 #include "dec.h"
+#include <stdbool.h>
 using namespace std;
 string board [9] = {" "," "," "," "," "," "," "," "," "};
 int player = 1;
@@ -40,29 +41,27 @@ void introduction () {
 
 }
 bool is_winner() {
-
-bool winner = false;
+    
 //checking the rows
 if((board[0] == board[1]) && (board[1] == board[2]) && (board [0] != " ")) {
-    winner = true;
+    return true;
 } else if((board[3] == board[4]) && (board[4] == board[5]) && (board[4] != " ")){
-    winner = true;
+    return true;
 } else if ((board[6] == board[7]) && (board[7] == board[8]) && (board[6] != " ")) {
-    winner = true;
+    return true;
     //checking the collums
 }else if ((board[0] == board[3]) && (board[3] == board[6]) && (board[0] != " ")) {
-    winner = true;
+    return true;
 } else if ((board[1] == board[4]) && (board[4] == board[7]) && (board[1] != " ")) {
-    winner = true;
+    return true;
 } else if ((board[2] == board[5]) && (board[5] == board[8]) && (board[2] != " ")) {
-    winner = true;
+    return true;
     //checking crosses
 } else if((board[2] == board[4]) && (board[4] == board[6]) && (board[2] != " ")) {
-    winner = true;
+    return true;
 } else if ((board[0] == board[4]) && (board[4] == board[8]) && (board[0] != " ")) {
-    winner = true;
+    return true;
 }
-
 }
 bool filled_up() {
     bool filled = true;
