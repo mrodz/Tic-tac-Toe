@@ -1,3 +1,5 @@
+#include <stdbool.h>
+
 #ifndef DEC_H
 #define DEC_H
 
